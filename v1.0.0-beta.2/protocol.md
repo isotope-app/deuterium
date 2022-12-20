@@ -139,11 +139,14 @@ provided.
 
 ```
 ---
-  address:    string
-  publicKey:  string
-  content:    string
-  signature:  string
-  mac:        string
-  timestamp:  number
+  address:       string
+  publicKey:     string
+  content:       string
+  signedMessage: string
+  signature:     string
+  mac:           string
+  authTag:       string
+  iv:            string
+  timestamp:     number
 ---
 ```
