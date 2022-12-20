@@ -36,13 +36,13 @@ be sent. An id is also provided to ensure the originality of the message.
 ## Accepted event
 
 When a user is accepted into the channel, the channel's creator will perform a
-ECDH key exchange with the user that wants to join the channelm, as well as
-updating the group key that was generated for the rest of the group members if
-it is present. After performing the key exchange, the server will send the
-generated group key back to the user, encrypted using the public key of the
-user. A digital signature is also required to verify the identity of the sender.
-The GMAC of the group key is also calculated to protect the originality of the
-group key.
+ECDH key exchange, using curve25519, with the user that wants to join the
+channel, as well as updating the group key that was generated for the rest of
+the group members if it is present. After performing the key exchange, the
+server will send the generated group key back to the user, encrypted using the
+public key of the user. A digital signature is also required to verify the
+identity of the sender. The GMAC of the group key is also calculated to protect
+the originality of the group key.
 
 ### Diagram
 
